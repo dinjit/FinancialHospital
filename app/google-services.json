@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "564548327856",
+    "firebase_url": "https://financial-hospital-33be1.firebaseio.com",
+    "project_id": "financial-hospital-33be1",
+    "storage_bucket": "financial-hospital-33be1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:564548327856:android:0635090a9bfd65f55d1e75",
+        "android_client_info": {
+          "package_name": "com.example.financialhospital"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "564548327856-eijsj0jm3bufu0js8t6j2mlb2e94v8pa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVyM1d1WBJzvRL6NrrWMQSZLZOTOcKyQE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "564548327856-eijsj0jm3bufu0js8t6j2mlb2e94v8pa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
