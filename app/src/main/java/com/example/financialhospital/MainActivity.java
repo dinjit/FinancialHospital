@@ -49,7 +49,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.add(R.id.pager, new YourInfoFragment()).commit();
 
-
+        resetBackgroud();
+        navigateToFragment(pageNo);
         contactNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -94,7 +95,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
         }
+        resetBackgroud();
         navigateToFragment(pageNo);
+
+    }
+
+    private void resetBackgroud() {
+        cvYourInfo.setBackgroundColor(getResources().getColor(R.color.colorAccentLight));
+        cvKnowYouBetter.setBackgroundColor(getResources().getColor(R.color.colorAccentLight));
+        cvKnowYourRisk.setBackgroundColor(getResources().getColor(R.color.colorAccentLight));
+        cvYourFamily.setBackgroundColor(getResources().getColor(R.color.colorAccentLight));
 
     }
 
@@ -102,6 +112,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (pageNo) {
             case 1:
                 showFragment(new YourInfoFragment());
+                cvYourInfo.setBackgroundColor(getResources().getColor(R.color.colorAccent));
                 break;
             case 2:
                 OtherFragments otherFragments = new OtherFragments();
@@ -109,6 +120,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 bundle.putString("fragmentName", "Know You Better");
                 otherFragments.setArguments(bundle);
                 showFragment(otherFragments);
+                cvKnowYouBetter.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+
                 break;
             case 3:
                 OtherFragments otherFragments1 = new OtherFragments();
@@ -116,6 +129,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 bundle1.putString("fragmentName", "Know Your Risk");
                 otherFragments1.setArguments(bundle1);
                 showFragment(otherFragments1);
+                cvKnowYourRisk.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+
                 break;
             case 4:
 
@@ -124,6 +139,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 bundle2.putString("fragmentName", "Your Family");
                 otherFragments2.setArguments(bundle2);
                 showFragment(otherFragments2);
+                cvYourFamily.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+
                 break;
         }
     }
